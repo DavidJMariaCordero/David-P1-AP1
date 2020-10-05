@@ -1,10 +1,11 @@
 using Microsoft.EntityFrameworkCore;
-//using David_P1_AP1.Entidades;
+using David_P1_AP1.Entidades;
 
-namespace Prestamos.DAL
+namespace David_P1_AP1.DAL
 {
     public class Contexto : DbContext
     {
+        public DbSet<Ciudad> Ciudad {get; set;}
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
