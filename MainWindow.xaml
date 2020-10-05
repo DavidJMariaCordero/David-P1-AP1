@@ -1,0 +1,32 @@
+﻿<Window x:Class="David_P1_AP1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:David_P1_AP1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+    <StackPanel>
+            <StackPanel Orientation = "Horizontal">
+            <Menu Height="18">
+                <MenuItem Header="Registros">
+                    <MenuItem x:Name="rPersona" Header="Registro de Personas"/>
+                    <MenuItem x:Name="rPrestamo" Header="Registro de Prestamos"/>
+                </MenuItem>
+            </Menu>
+            
+            <Menu Height="18">
+                <MenuItem Header="Consultas">
+                    <MenuItem x:Name="cPersona" Header="Consulta de Personas"/>
+                    <MenuItem x:Name="cPrestamo" Header="Consulta de Prestamos"/>
+                </MenuItem>
+            </Menu>
+            </StackPanel>
+
+            
+        </StackPanel>
+
+    </Grid>
+</Window>
