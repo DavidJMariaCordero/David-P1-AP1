@@ -24,7 +24,7 @@
         </StackPanel>
 
         <!--Boton de consultar-->
-        <StackPanel Margin = "10,0">
+        <StackPanel Margin = "5,0">
             <Button x:Name = "ConsultarBoton" Width = "85" Height = "30" Click = "ConsultarBoton_Click">
                 <StackPanel Orientation = "Horizontal">
                     <Image Source ="/Icons/Zoom.png"/>
