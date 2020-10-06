@@ -3,28 +3,29 @@ using System.Windows;
 using David_P1_AP1.DAL;
 using David_P1_AP1.Entidades;
 using David_P1_AP1.BLL;
-using David_P1_AP1.UI.Registros;
+using David_P1_AP1.UI;
 
 namespace David_P1_AP1.UI.Registros{
     public partial class rCiudad:Window{
+       
         private Ciudad ciudad;
         public rCiudad(){
             InitializeComponent();
-            ciudad = new Ciudad;
+            ciudad = new Ciudad();
             this.DataContext = ciudad;
         }
 
-        public void GuardarBoton_Click(object render, RoutedEventArgs e){
+        public void GuardarBoton_CLick(object render, RoutedEventArgs e){
             if(!Validar())
                 return;
             var paso = CiudadBLL.Guardar(ciudad);
             if(paso){
                 Limpiar();
-                MessageBox.Show("Guardado con exito", "Bien", MessageBoxButton.Ok);
+                MessageBox.Show("Guardado con exito", "Bien", MessageBoxButton.OK);
             }
             else
             {
-                MessageBox.Show("Error al guardar", "Error", MessageBoxButton.Ok);
+                MessageBox.Show("Error al guardar", "Error", MessageBoxButton.OK);
             }
 
         }
@@ -35,7 +36,7 @@ namespace David_P1_AP1.UI.Registros{
 
         }
 
-        public void BuscarBoton_Click(object render, RoutedEventArgs e){
+        public void BuscarBoton_CLick(object render, RoutedEventArgs e){
             Contexto contexto = new Contexto();
             var encontrado = CiudadBLL.Buscar(Convert.ToInt32(CiudadIdTextBox.Text));
             if(encontrado != null)
@@ -50,18 +51,18 @@ namespace David_P1_AP1.UI.Registros{
 
         private bool Validar(){
             bool valido = true;
-            if(NombreTextBox.Text.Lenght == 0){
+            if(NombreTextBox.Text.Length == 0){
                 valido = false;
                 MessageBox.Show("Debe incluir el nombre", "Error", MessageBoxButton.OK);
             }
             return valido;
         }
 
-        public void NuevoBoton_Click(object render, RoutedEventArgs e){
+        public void NuevoBoton_CLick(object render, RoutedEventArgs e){
             Limpiar();
         }
 
-        public void EliminarBoton_Click(object render, RoutedEventArgs e){
+        public void EliminarBoton_CLick(object render, RoutedEventArgs e){
             if(CiudadBLL.Eliminar(Convert.ToInt32(CiudadIdTextBox.Text))){
                 Limpiar();
                 MessageBox.Show("Eliminado", "Exito", MessageBoxButton.OK);

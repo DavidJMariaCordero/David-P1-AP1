@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using David_P1_AP1.UI.Registros;
 
 namespace David_P1_AP1
 {
@@ -24,5 +25,10 @@ namespace David_P1_AP1
         {
             InitializeComponent();
         }
+
+        public void rCiudad_CLick(object render, RoutedEventArgs e){
+            new rCiudad().Show();
+        }
+
     }
 }

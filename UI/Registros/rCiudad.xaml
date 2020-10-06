@@ -3,55 +3,57 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-    xmlns:local="clr-namespace:David_P1_AP1" 
+    xmlns:local="clr-namespace:David_P1_AP1.UI.Registros" 
     mc:Ignorable="d" Title="Registro de Ciudades" Height="450" Width="800">
-
-        <StackPanel Orientation="Horizontal">
+    <Grid>
+        <StackPanel Orientation="Vertical">
         
+                <StackPanel Orientation="Horizontal" >
                 <Label Content="CiudadId"/>
-                <TextBox x:Name="CiudadIdTextBox" Text="{Binding CiudadId}"/>
+                <TextBox x:Name="CiudadIdTextBox" Width = "100" Text="{Binding CiudadId}"/>
                 
-                <Button x:Name="BuscarButton" Click = "BuscarBoton_CLick">
+                <Button x:Name="BuscarButton" Click ="BuscarBoton_CLick">
                     <StackPanel>
-                        <Image Source ="\Icons\Zoom.png"/>
+                        <Image Source =".\Icons\Zoom.png"/>
                         <TextBlock Text="Buscar"/>
-                    <StackPanel/>
-                <Button/>
-                
+                    </StackPanel>
+                </Button>
+                </StackPanel>
                     
-                    <StackPanel Orientation="Horizontal">
-                        <Label Content="Nombre"/>
-                        <TextBox x:Name="NombreTextBox" Text="{Binding Nombre}"/>
+                    <StackPanel Orientation="Horizontal" >
+                        <Label Content="Nombre" Width = "58"/>
+                        <TextBox x:Name="NombreTextBox" Width = "100" Text="{Binding Nombre}"/>
                     </StackPanel>
 
-                <StackPanel>
-                <Button x:Name="NuevoButton" Click = "NuevoBoton_CLick">
-                    <StackPanel>
-                        <Image Source ="\Icons\nuevo.png"/>
-                        <TextBlock Text="Nuevo"/>
-                    <StackPanel/>
-                <Button/>
-                <StackPanel/>
+            <StackPanel Orientation = "Horizontal">
+                <StackPanel Width = "80">
+                    <Button x:Name="NuevoButton" Click = "NuevoBoton_CLick" >
+                        <StackPanel>
+                            <Image Source ="\Icons\nuevo.png"/>
+                            <TextBlock Text="Nuevo"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
 
-                <StackPanel>
-                <Button x:Name="GuardarButton" Click = "GuardarBoton_CLick">
-                    <StackPanel>
-                        <Image Source ="\Icons\disquete.png"/>
-                        <TextBlock Text="Guardar"/>
-                    <StackPanel/>
-                <Button/>
-                <StackPanel/>
+                <StackPanel Width = "60">
+                    <Button x:Name="GuardarButton" Click = "GuardarBoton_CLick">
+                        <StackPanel Orientation = "Horizontal">
+                            <Image Source ="\Icons\disquete.png"/>
+                            <TextBlock Text="Guardar"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
                 
-                <StackPanel>
-                <Button x:Name ="EliminarButton"  Click = "EliminarBoton_CLick">
-                    <StackPanel>
-                        <Image Source ="\Icons\borrar.png"/>
-                        <TextBlock Text="Eliminar"/>
-                    <StackPanel/>
-                <Button/>
-                <StackPanel/>
-            
+                <StackPanel Width = "60">
+                    <Button x:Name ="EliminarButton"  Click = "EliminarBoton_CLick">
+                        <StackPanel>
+                            <Image Source ="\Icons\borrar.png"/>
+                            <TextBlock Text="Eliminar"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
 
         </StackPanel>
- 
+    </Grid>
 </Window>
