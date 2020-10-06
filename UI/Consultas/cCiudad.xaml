@@ -25,12 +25,13 @@
 
         <!--Boton de consultar-->
         <StackPanel Margin = "10,0">
-            <Button x:Name = "ConsultarBoton" Width = "85" Height = "30">
+            <Button x:Name = "ConsultarBoton" Width = "85" Height = "30" Click = "ConsultarBoton_Click">
                 <StackPanel Orientation = "Horizontal">
-                    <Image Source ="\Icons\Zoom.png"/>
+                    <Image Source ="/Icons/Zoom.png"/>
                     <TextBlock Text="Consultar"/>
                 </StackPanel>
             </Button>
+        </StackPanel>
         </StackPanel>
         <!--DATAGRID-->
         <StackPanel>
@@ -41,7 +42,7 @@
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>
-        </StackPanel>
+        
         </StackPanel>
         
     </Grid>
