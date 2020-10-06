@@ -100,6 +100,21 @@ namespace David_P1_AP1.BLL{
             return encontrado;
         }
 
+        public static bool Existe(string nombre){
+            bool encontrado = false;
+            Contexto contexto = new Contexto();
+            try{
+                encontrado = contexto.Ciudad.Any(c => c.Nombre == nombre);
+            }
+            catch(Exception){
+                throw;
+            }
+            finally{
+                contexto.Dispose();
+            }
+            return encontrado;
+        }
+
 
         
     }

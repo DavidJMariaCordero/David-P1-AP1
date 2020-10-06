@@ -55,6 +55,10 @@ namespace David_P1_AP1.UI.Registros{
                 valido = false;
                 MessageBox.Show("Debe incluir el nombre", "Error", MessageBoxButton.OK);
             }
+            else if(CiudadBLL.Existe(NombreTextBox.Text)){
+                valido = false;
+                MessageBox.Show("Esta ciudad ya esta registrada", "Error", MessageBoxButton.OK);
+            }
             return valido;
         }
 
