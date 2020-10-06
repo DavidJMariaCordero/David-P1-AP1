@@ -1,0 +1,48 @@
+<Window x:Class="David_P1_AP1.UI.Consultas.cCiudad" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:local="clr-namespace:David_P1_AP1.UI.Consultas" 
+    mc:Ignorable="d" Title="Consulta de Ciudades" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation = "Vertical" Margin = "10,10,10,0">
+        <StackPanel Orientation = "Horizontal" >
+        <!--ComboBox-->
+        <StackPanel Margin = "10,0">
+        <Label Content = "Filtro"/>
+            <ComboBox x:Name = "FiltroComboBox" Width = "100" Height = "30">
+                <ComboBoxItem Content = "CiudadId"/>
+                <ComboBoxItem Content = "Nombre"/>
+            </ComboBox>
+        </StackPanel>
+        
+        <!--Criterio-->
+        <StackPanel Margin = "10,0">
+            <Label Content = "Criterio"/>
+            <TextBox x:Name = "CriterioTextBox" Width = "90" Height = "30"/>
+        </StackPanel>
+
+        <!--Boton de consultar-->
+        <StackPanel Margin = "10,0">
+            <Button x:Name = "ConsultarBoton" Width = "85" Height = "30">
+                <StackPanel Orientation = "Horizontal">
+                    <Image Source ="\Icons\Zoom.png"/>
+                    <TextBlock Text="Consultar"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <!--DATAGRID-->
+        <StackPanel>
+            <DataGrid x:Name = "InfoDataGrid" Height = "300" Width = "300" AutoGenerateColumns = "false" IsReadOnly = "true">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header = "CiudadId" Binding = "{Binding CiudadId}"/>
+                    <DataGridTextColumn Header = "Nombre" Binding = "{Binding Nombre}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+        </StackPanel>
+        </StackPanel>
+        
+    </Grid>
+</Window>

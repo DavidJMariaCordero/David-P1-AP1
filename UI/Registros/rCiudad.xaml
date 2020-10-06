@@ -12,42 +12,42 @@
                 <Label Content="CiudadId"/>
                 <TextBox x:Name="CiudadIdTextBox" Width = "100" Text="{Binding CiudadId}"/>
                 
-                <Button x:Name="BuscarButton" Click ="BuscarBoton_CLick">
+                <Button x:Name="BuscarButton" Click ="BuscarBoton_CLick" Margin = "10,10,10,0">
                     <StackPanel>
-                        <Image Source =".\Icons\Zoom.png"/>
+                        <Image Source ="/Icons/Zoom.png"/>
                         <TextBlock Text="Buscar"/>
                     </StackPanel>
                 </Button>
                 </StackPanel>
-                    
-                    <StackPanel Orientation="Horizontal" >
+                    <!--Nombre textbox-->
+                    <StackPanel Orientation="Horizontal">
                         <Label Content="Nombre" Width = "58"/>
                         <TextBox x:Name="NombreTextBox" Width = "100" Text="{Binding Nombre}"/>
                     </StackPanel>
-
-            <StackPanel Orientation = "Horizontal">
-                <StackPanel Width = "80">
+            <!--Boton nuevo-->
+            <StackPanel Orientation = "Horizontal" >
+                <StackPanel Width = "80" Margin = "10,10,0,0">
                     <Button x:Name="NuevoButton" Click = "NuevoBoton_CLick" >
                         <StackPanel>
-                            <Image Source ="\Icons\nuevo.png"/>
+                            <Image Source ="/Icons/nuevo.png"/>
                             <TextBlock Text="Nuevo"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>
-
-                <StackPanel Width = "60">
-                    <Button x:Name="GuardarButton" Click = "GuardarBoton_CLick">
+                <!--Boton guardar-->
+                <StackPanel Width = "80" Margin = "10,10,0,0">
+                    <Button x:Name="GuardarButton" Click = "GuardarBoton_CLick"  >
                         <StackPanel Orientation = "Horizontal">
-                            <Image Source ="\Icons\disquete.png"/>
+                            <Image Source ="/Icons/disquete.png"/>
                             <TextBlock Text="Guardar"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>
-                
-                <StackPanel Width = "60">
-                    <Button x:Name ="EliminarButton"  Click = "EliminarBoton_CLick">
+                <!--Boton Eliminar-->
+                <StackPanel Width = "80" Margin = "10,10,0,0">
+                    <Button x:Name ="EliminarButton"  Click = "EliminarBoton_CLick"  >
                         <StackPanel>
-                            <Image Source ="\Icons\borrar.png"/>
+                            <Image Source ="/Icons/borrar.png"/>
                             <TextBlock Text="Eliminar"/>
                         </StackPanel>
                     </Button>

@@ -115,6 +115,21 @@ namespace David_P1_AP1.BLL{
             return encontrado;
         }
 
+        public static List<Ciudad> GetList(Expression<Func<Ciudad, bool>> criterio){
+            List<Ciudad> lista = new List<Ciudad>();
+            Contexto contexto = new Contexto();
+            try{
+                lista = contexto.Ciudad.Where(criterio).AsNoTracking().ToList();
+            }
+            catch(Exception){
+                throw;
+            }
+            finally{
+                contexto.Dispose();
+            }
+
+            return lista;
+        }
 
         
     }

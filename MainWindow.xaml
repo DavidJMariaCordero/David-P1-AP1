@@ -8,19 +8,22 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
 
-    <StackPanel>
-            <StackPanel Orientation = "Horizontal">
+    <StackPanel >
+        <StackPanel Orientation = "Horizontal">
             <Menu Height="18">
                 <MenuItem Header="Registros">
-                    <MenuItem x:Name="rCiudad" Header="Registro de Ciudades" Click = "rCiudad_CLick"/>
+                    <MenuItem x:Name="rCiudad" Header="Registro de Ciudades" Click = "rCiudad_Click"/>
                 </MenuItem>
             </Menu>
             
-           
-            </StackPanel>
-
-            
+            <Menu Height="18">
+                <MenuItem Header="Consultas">   
+                    <MenuItem x:Name="cCiudad" Header="Consulta de Ciudades" Click = "cCiudad_Click"/>
+                </MenuItem>
+            </Menu>
         </StackPanel>
+            
+    </StackPanel>
 
     </Grid>
 </Window>
